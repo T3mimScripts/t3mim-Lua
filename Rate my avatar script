@@ -1,0 +1,117 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Rate my avatar script", "GrapeTheme")
+
+local Tab = Window:NewTab("Player")
+
+local Section = Tab:NewSection("Player")
+
+Section:NewTextBox("WalkSpeed", "WS", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+
+Section:NewTextBox("JumpPower", "JP", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+end)
+
+Section:NewButton("Infinite zoom", "you can zoom out of everywhere!", function()
+    game.Players.LocalPlayer.CameraMaxZoomDistance = 999999
+end)
+
+Section:NewButton("Inf jump", "jump in da sky forever!!", function()
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")       
+    end)
+end)
+
+Section:NewToggle("FOV", "FOV", function(state)
+    if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+end)
+
+Section:NewButton("FE invisible tool", "invis tool", function()
+    loadstring(game:HttpGet("https://gist.githubusercontent.com/skid123skidlol/cd0d2dce51b3f20ad1aac941da06a1a1/raw/f58b98cce7d51e53ade94e7bb460e4f24fb7e0ff/%257BFE%257D%2520Invisible%2520Tool%2520(can%2520hold%2520tools)",true))()
+end)
+
+local Tab = Window:NewTab("Chat Bypasser")
+
+local Section = Tab:NewSection("Chat bypasser")
+
+Section:NewButton("Chat bypasser", "Key is P1d#uT", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vqmpjayZ/Bypass/8e92f1a31635629214ab4ac38217b97c2642d113/vadrifts"))()
+
+end)
+
+Section:NewButton("Chat splitter", "Chat bypasser", function()
+    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/ChatBypasser-AZY/main/Chat%20Bypass%20-%20ChatSplitter(Source).lua"))()
+end)
+
+
+local Tab = Window:NewTab("Teleportations")
+
+local Section = Tab:NewSection("Teleports")
+
+Section:NewButton("TP to middle", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8.7579813, 4.69893169, 4.69344759, -0.999944329, 4.48110268e-06, -0.0105586853, -5.08494941e-06, 0.999999583, 0.000905967841, 0.0105586844, 0.00090597081, -0.999943912)
+end)
+
+Section:NewButton("TP to stage", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-79.1478195, 8.46583939, 6.01247931, -0.013203159, 0.000556736661, -0.999912739, -2.50980179e-06, 0.999999881, 0.00055681885, 0.999912858, 9.88008196e-06, -0.0132031571)
+end)
+
+Section:NewButton("TP to shop", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-63.8192978, 4.4767518, 55.1023674, -0.747604549, -0.0028390279, 0.664138079, -1.61310272e-05, 0.99999094, 0.00425656326, -0.664144099, 0.00317151565, -0.747597754)
+end)
+
+Section:NewButton("TP to top rated sign", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-66.0762711, 4.47090244, -39.2726555, 0.268731862, 0.00652546436, 0.96319288, -8.1702201e-06, 0.999977052, -0.00677239196, -0.963214993, 0.001812089, 0.268725753)
+end)
+
+Section:NewButton("TP to secret button", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-242.474915, 5.50000048, -243.501389, 0.512454987, -5.79881529e-08, 0.858714104, 6.76311203e-08, 1, 2.71688219e-08, -0.858714104, 4.41529977e-08, 0.512454987)
+end)
+
+Section:NewButton("TP to computer", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-88.7278366, 4.4731102, 37.8218842, 0.999272287, 0.000286712399, 0.0381421931, -1.04213404e-05, 0.999973774, -0.00724367006, -0.0381432697, 0.0072380011, 0.999246061)
+end)
+
+Section:NewButton("TP to lounge", "TP", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5900.87988, -52.5315285, 23.9805527, -0.999754906, -0.000131204128, -0.0221379958, -4.33321202e-06, 0.999983609, -0.00573059916, 0.0221383832, -0.00572909927, -0.999738514)
+end)
+
+local Tab = Window:NewTab("Admin")
+
+local Section = Tab:NewSection("Admin scripts")
+
+Section:NewButton("Infinite yield", "Admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+Section:NewButton("Nameless admin", "Admin", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+
+end)
+
+Section:NewButton("CMD", "Admin", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/cmd/main/testing-main.lua"))()
+end)
+
+Section:NewButton("Dex explorer", "Admin", function()
+loadstring(game:HttpGet('https://ithinkimandrew.site/scripts/tools/dark-dex.lua'))()
+
+end)
+
+
+local Tab = Window:NewTab("Credits")
+
+local Section = Tab:NewSection("Credits")
+
+Section:NewButton("My YT", "Click to copy my yt (PLZ SUB)", function()
+    setclipboard("T3mim scripts")
+
+end)
